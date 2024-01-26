@@ -1,0 +1,77 @@
+@font-face {
+    font-family: "Montserrat-Bold";  
+    src: url("../fonts/Montserrat-Bold.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal;
+    }
+@font-face {
+    font-family: "Montserrat-Italic";  
+    src: url("../fonts/Montserrat-Italic.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal;
+    }
+@font-face {
+    font-family: "Montserrat-Light";  
+    src: url("../fonts/Montserrat-Light.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal;
+    }
+@font-face {
+    font-family: "Montserrat-Regular";  
+    src: url("../fonts/Montserrat-Regular.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal;
+    }
+
+body {
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 22px;
+    background-color: rgba(128, 128, 128, 0.2);
+}
+
+.logoHeader {
+    width: 100px;
+}
+
+.buttonHeader {
+    display: flex;
+    align-items: center;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-group,
+.btn-group {
+    margin: 0 10px;
+}
+
+.input-group {
+    width: 300px;
+    margin-top: 10px;
+} 
+
+.btn-group {
+    margin-top: 10px;
+}
+
+.visitList {
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 1250px;
+    height: 800px;
+    background-color: rgba(128, 128, 128, 0.2);
+    border: 2px dashed #DC3545;
+    border-radius: 5px;
+}
