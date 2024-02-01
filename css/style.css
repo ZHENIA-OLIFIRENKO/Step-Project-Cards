@@ -75,14 +75,14 @@ body {
     color: rgb(19, 19, 19);
     font-size: 13.4px;
     font-family: "Montserrat-Italic", sans-serif;
-  }
+}
 
-  .search {
+.search {
     transition: all 0.3s ease-in-out;
     
-  }
-  
-  .search {
+}
+
+.search {
     width: 150px;
     height: 38px;
     border-radius: 50px;
@@ -95,20 +95,16 @@ body {
     color: white;
     margin-right: 40px;
     font-family: "Montserrat-Regular";
-  }
-  
-  .search:hover {
+}
+
+.search:hover {
     transform: translateY(3px);
     box-shadow: none;
-  }
-  
-  .search:active {
+}
+
+.search:active {
     opacity: 0.5;
-  }
-
-#visit-text {}
-
-#find {}
+}
 
 .main {
     display: flex;
@@ -145,4 +141,227 @@ body {
     background-color: rgba(128, 128, 128, 0.2);
     border: 2px dashed #DC3545;
     border-radius: 5px;
+}
+
+.form {
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(156, 156, 156, 0.8);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.form form {
+	background-color: rgba(219, 39, 39, 0.5);
+	box-shadow: rgba(0, 0, 0, 0.2) 0 12px 28px 0;
+	border-radius: 8px;
+	width: 450px;
+	padding-top: 15px;
+	padding-inline: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	row-gap: 15px;
+	position: relative;
+}
+
+.close-form {
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	cursor: pointer;
+	right: 15px;
+	border-radius: 5px;
+}
+
+.close-form:hover {
+	height: 22px;
+	width: 22px;
+}
+.inputs-container {
+	width: 100%;
+	margin: 10px;
+	display: flex;
+	flex-direction: column;
+	row-gap: 8px;
+}
+
+.inputs-container h3 {
+	text-align: center;
+	color: white;
+	font-size: 20px;
+	font-weight: 700;
+	font-family: "Montserrat-Bold";
+	margin-bottom: 4px;
+	margin-inline: 15px;
+}
+
+.inputs-container input,
+.inputs-container select {
+	font-family: "Montserrat-Regular";
+	font-size: 11px;
+	padding: 4px;
+	border: 0.2px solid rgb(158, 158, 158);
+	border-radius: 8px;
+	display: block;
+	width: 100%;
+	margin-top: 3px;
+}
+
+.inputs-container label {
+	text-align: center;
+	font-size: 13px;
+	color: rgb(230, 230, 230);
+	font-weight: 600;
+	font-family: "Montserrat-Regular";
+}
+
+.inputs-container input.submit {
+	display: block;
+	font-size: 15px;
+	background-color: rgba(23, 62, 159, 0.8);
+	font-weight: 600;
+	padding: 10px;
+	align-self: center;
+	border: 1px solid white;
+	border-radius: 8px;
+	cursor: pointer;
+	color: white;
+	box-shadow: 10px 10px 15px rgba(70, 70, 70, 0.3);
+}
+.inputs-container input.submit:hover {
+	background-color: rgba(20, 55, 140, 0.8);
+	box-shadow: inset 10px 10px 15px rgba(70, 70, 70, 0.7);
+}
+
+.additional-info {
+	display: flex;
+	flex-direction: column;
+	row-gap: 8px;
+}
+
+.additional-info__item {
+	display: none;
+}
+
+.empty {
+	justify-content: center;
+	align-items: center;
+}
+
+.card {
+	padding: 5px;
+	height: auto;
+	width: 30%;
+	font-size: 13px;
+	border: 1px solid rgb(220, 53, 69, 0.3);
+	border-radius: 15px;
+	display: grid;
+	gap: 5px;
+	font-family: "Montserrat-Regular";
+	padding: 10px;
+}
+
+.card span {
+	color: rgba(23, 62, 159, 0.9);
+}
+
+.card-select {
+	height: auto;
+	width: 18%;
+	font-size: 13px;
+	border: 1px solid rgb(220, 53, 69, 0.3);
+	border-radius: 15px;
+	display: grid;
+	gap: 5px;
+	font-family: "Montserrat-Regular";
+	padding: 10px;
+}
+
+.visit__text {
+	font-weight: 500;
+}
+
+.visit__text span {
+	font-weight: bold;
+}
+
+.card__main-info {
+	display: flex;
+	justify-content: space-between;
+}
+
+.card__main-text {
+	display: flex;
+	margin-right: 25px;
+	column-gap: 5px;
+}
+.card__main-text div {
+	padding-top: 10px;
+}
+.card__main-text .visit__text {
+	padding-bottom: 10px;
+}
+.doctor-img {
+	display: block;
+	border-radius: 25px;
+	width: 50px;
+	height: 50px;
+	margin: 3px;
+}
+
+.card__main-imgs {
+	position: relative;
+	width: 25px;
+}
+
+.visit__delete {
+	position: absolute;
+	top: 30px;
+	height: 23px;
+	width: 23px;
+	right: 3px;
+}
+
+.visit__edit {
+	position: absolute;
+	top: 0;
+	right: 3px;
+	height: 21px;
+	width: 21px;
+}
+
+.visit__delete:hover,
+.visit__edit:hover {
+	height: 25px;
+	width: 25px;
+}
+
+.card__show-more,
+.visit__add-info-cardio,
+.visit__add-info-dentist,
+.visit__add-info-age {
+	display: none;
+	width: 100%;
+}
+.card__show-more {
+	border: 1px dashed #DC3545;
+	border-radius: 8px;
+	padding: 3px;
+}
+
+.visit__btn {
+	width: 100%;
+}
+
+.active {
+	display: flex;
+	flex-direction: column;
+	row-gap: 8px;
 }
