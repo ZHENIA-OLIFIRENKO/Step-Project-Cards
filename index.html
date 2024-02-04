@@ -26,40 +26,30 @@
     </header>
     <main>
         <section class="main filter">
-            <div class="inputs-group">
-
-                <div class="InputContainer">
-                    <input id="visit-text" class="input" type="text" placeholder="Причина візиту">
-                </div>
-                <input id="find" class="search" type="submit" value="Пошук">
-            </div>
-
-            <div class="btn-group">
-                <button id="doctor" type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    Лікар
-                </button>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" value="" href="#">Всі</a></li>
-                    <li><a class="dropdown-item" href="#">Кардіолог</a></li>
-                    <li><a class="dropdown-item" href="#">Стоматолог</a></li>
-                    <li><a class="dropdown-item" href="#">Терапевт</a></li>
-                </ul>
-            </div>
-
-
-            <div class="btn-group">
-                <button id="urgency" type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    Терміновість візиту
-                </button>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" value="" href="#">Всі</a></li>
-                    <li><a class="dropdown-item" href="#">Невідкладна</a></li>
-                    <li><a class="dropdown-item" href="#">Пріорітетна</a></li>
-                    <li><a class="dropdown-item" href="#">Звичайна</a></li>
-                </ul>
-            </div>
+            <nav class="filter-wrap">
+                <form class="filter">
+                    <input id="visit-text" type="text" placeholder="Введіть заголовок/вміст візиту">
+                    <div>
+                        <label for="doctor">Лікар</label>
+                        <select id="doctor">
+                            <option value="">Всі</option>
+                            <option>Кардіолог</option>
+                            <option>Стоматолог</option>
+                            <option>Терапевт</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="urgency">Терміновість візиту</label>
+                        <select id="urgency">
+                            <option value="">Всі</option>
+                            <option>Невідкладна</option>
+                            <option>Пріорітетна</option>
+                            <option>Звичайна</option>
+                        </select>
+                    </div>
+                    <input id="find" type="submit" value="Пошук">
+                </form>
+            </nav>
         </section>
 
         <div class="visitList">
