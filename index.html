@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <title>Step Project Cards</title>
+    <link rel="icon" href="./img/headerIcon.png" type="image/headerIcon.png">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header>
+        <section class="header">
+                <a class="iconHeader" href="#">
+                    <img class="logoHeader" src="./img/headerIcon.png">
+                </a>
+                <div class="buttonHeader">
+                    <button type="button" class="btn btn-outline-danger header-btn">Log In</button>
+                </div>
+        </section>
+    </header>
+    <main>
+        <section class="filter">
+            <nav class="filter-wrap">
+                <form class="filter">
+                    <input id="visit-text" class="input" type="text" placeholder="Мета візиту">
+                    <div class="select-doctor">
+                        <label for="doctor">Лікар</label>
+                        <select class="choose-doctor" id="doctor">
+                            <option class="doctor-take" value="">Всі</option>
+                            <option class="doctor-take">Кардіолог</option>
+                            <option class="doctor-take">Стоматолог</option>
+                            <option class="doctor-take">Терапевт</option>
+                        </select>
+                    </div>
+                    <div class="urgency-of-visit">
+                        <label for="urgency">Терміновість візиту</label>
+                        <select class="urgency-select" id="urgency">
+                            <option value="">Всі</option>
+                            <option>Невідкладна</option>
+                            <option>Пріорітетна</option>
+                            <option>Звичайна</option>
+                        </select>
+                    </div>
+                    <input id="find" class="search" type="submit" value="Пошук">
+                </form>
+            </nav>
+        </section>
+
+        <div class="visitList">
+
+        </div>
+    </main>
+
+    <template id="form-template">
+        <div class="form">
+            <form>
+                <img class="close-form" src="./img/cross.png" alt="">
+                <div class="inputs-container"></div>
+            </form>
+        </div>
+    </template>
+    <template id="form_enter-filling">
+        <h3>Введіть дані для авторизації</h3>
+        <input class="user-email" required type="email" placeholder="Електронна адреса">
+        <input class="user-password" required type="password" placeholder="Пароль">
+        <input class="submit" type="submit" value="Зареєструватися">
+    </template>
+    <template id="card-template">
+        <div class="card" draggable="true">
+            <div class='card__main-info'>
+                <div class='card__main-text'>
+                    <img class="doctor-img" src="./img/doctor.svg" alt="" />
+                    <div>
+                        <p class="visit__text">Пацієнт: <span data-edit="name" class="visit__person"></span></p>
+                        <p class="visit__text">Лікар: <span data-edit="doctor" name="doctor"
+                                class="visit__text-doctor"></span></p>
+                    </div>
+                </div>
+                <div class="card__main-imgs">
+                    <img class="visit__edit" src="./img/edit.svg" alt="edit" />
+                    <img class="visit__delete" src="./img/delete.svg" alt="delete" width="25" height="25" />
+                </div>
+            </div>
+            <div class="card__show-more">
+                <p class="visit__text">Терміновість: <span data-edit="origins" name="urgency"
+                        class="visit__text-origins"></span></p>
+                <p class="visit__text">Мета візиту: <span data-edit="purposeVisit" name="text"
+                        class="visit__text-purpose"></span>
+                </p>
+                <p class="visit__text">Короткий опис візиту: <span data-edit="description" name="text"
+                        class="visit__text-desc"></span></p>
+                <div class="visit__add-info visit__add-info-cardio">
+                    <p class="visit__text">Тиск: <span data-edit="pressure" class="visit__text-pressure"></span>
+                    </p>
+                    <p class="visit__text">Індекс маси тіла: <span data-edit="indexMassa"
+                            class="visit__text-imassa"></span></p>
+                    <p class="visit__text">Перенесені захворювання серця: <span data-edit="ill"
+                            class="visit__ill"></span></p>
+                </div>
+                <div class="visit__add-info visit__add-info-dentist">
+                    <p class="visit__text">Дата останнього візиту: <span data-edit="lastVisit"
+                            class="visit__date"></span></p>
+                </div>
+                <div class="visit__add-info visit__add-info-age">
+                    <p class="visit__text">Вік: <span data-edit="age" class="visit__age"></span></p>
+                </div>
+            </div>
+            <button class="visit__btn">Показати більше</button>
+        </div>
+    </template>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js" type="module"></script>
+
+</body>
+
+</html>
