@@ -77,7 +77,7 @@ export class Visit {
                     this.cardWrap.remove()
                     const renderedVisits = document.querySelectorAll('.card');
                     if (renderedVisits.length === 0) {
-                        cardContainer.textContent = 'Записів до лікарів на цей час немає'
+                        cardContainer.textContent = 'No items have been added'
                         cardContainer.classList.add('empty')
                     }
                 } else {
@@ -159,7 +159,7 @@ export class Cards{
     renderAll() {
         Requests.get().then(cardsArray => {
         if (cardsArray.length === 0) {
-            cardContainer.textContent = 'Записів до лікарів на цей час немає'
+            cardContainer.textContent = 'No items have been added'
             cardContainer.classList.add('empty')
 		} else {            
             cardContainer.textContent = ''
