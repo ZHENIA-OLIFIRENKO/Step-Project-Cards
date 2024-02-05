@@ -16,38 +16,38 @@
 <body>
     <header>
         <section class="header">
-                <div class="iconHeader">
+                <a class="iconHeader" href="#">
                     <img class="logoHeader" src="./img/headerIcon.png">
-                </div>
+                </a>
                 <div class="buttonHeader">
                     <button type="button" class="btn btn-outline-danger header-btn">Log In</button>
                 </div>
         </section>
     </header>
     <main>
-        <section class="main filter">
+        <section class="filter">
             <nav class="filter-wrap">
                 <form class="filter">
-                    <input id="visit-text" type="text" placeholder="Введіть заголовок/вміст візиту">
-                    <div>
+                    <input id="visit-text" class="input" type="text" placeholder="Мета візиту">
+                    <div class="select-doctor">
                         <label for="doctor">Лікар</label>
-                        <select id="doctor">
-                            <option value="">Всі</option>
-                            <option>Кардіолог</option>
-                            <option>Стоматолог</option>
-                            <option>Терапевт</option>
+                        <select class="choose-doctor" id="doctor">
+                            <option class="doctor-take" value="">Всі</option>
+                            <option class="doctor-take">Кардіолог</option>
+                            <option class="doctor-take">Стоматолог</option>
+                            <option class="doctor-take">Терапевт</option>
                         </select>
                     </div>
-                    <div>
+                    <div class="urgency-of-visit">
                         <label for="urgency">Терміновість візиту</label>
-                        <select id="urgency">
+                        <select class="urgency-select" id="urgency">
                             <option value="">Всі</option>
                             <option>Невідкладна</option>
                             <option>Пріорітетна</option>
                             <option>Звичайна</option>
                         </select>
                     </div>
-                    <input id="find" type="submit" value="Пошук">
+                    <input id="find" class="search" type="submit" value="Пошук">
                 </form>
             </nav>
         </section>
@@ -67,8 +67,8 @@
     </template>
     <template id="form_enter-filling">
         <h3>Введіть дані для авторизації</h3>
-        <input class="user-email" required type="email" placeholder="Електронна адреса" value="example_email@gmail.com">
-        <input class="user-password" required type="password" placeholder="Пароль" value="123456">
+        <input class="user-email" required type="email" placeholder="Електронна адреса">
+        <input class="user-password" required type="password" placeholder="Пароль">
         <input class="submit" type="submit" value="Зареєструватися">
     </template>
     <template id="card-template">
